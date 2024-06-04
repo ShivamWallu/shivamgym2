@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+    <title>Plans</title>
+<style>
+    
+/* LOGO IMAGE AND NAME */
+
+
+
+/* menu open */
+
+
+/* ============================================================================ */
+/* JOIN IN BUTTON */
+
+
+/* ============================================================================================== */
+
+.plan-chooser {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color: #fff; */
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 24px;
+    color: #000;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 14px;
+    width: 333px;
+
+}
+
+.header {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* .plan-chooser .title {
+    font-size: 1.875rem;
+    font-weight: 700;                                                
+    color: #000;
+    margin-bottom: 10px;
+} */
+
+.header .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh; /* Full viewport height */
+  margin-left: -40px;
+}
+
+.header .box {
+  width: 65px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  transition: all .8s;
+  cursor: pointer;
+  position: relative;
+  background: #f44336;
+  overflow: hidden;
+}
+
+.header .box:before {
+  content: "P";
+  position: absolute;
+  top: 0;
+  /* background: #0f0f0f; */
+  background: #FFF;
+  color: #000000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform .4s;
+
+}
+
+.header .box:nth-child(2)::before {
+  transform: translateY(-100%);
+  content: 'L';
+}
+
+.header .box:nth-child(3)::before {
+  content: 'A';
+}
+
+.header .box:nth-child(4)::before {
+  transform: translateY(-100%);
+  content: 'N';
+}
+
+.header .box:nth-child(5)::before {
+  content: 'S';
+}
+
+.header .button:hover .box:before {
+  transform: translateY(0);
+}
+
+
+  /* New class for the hover effect */
+  .header .hover-active .box:before {
+    transform: translateY(0);
+  }
+
+
+
+
+
+
+/* PLANS */
+
+
+
+
+.plan-chooser .desc {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: rgba(75, 85, 99, 1);
+}
+
+.plan-option {
+    margin-top: 1rem;
+}
+
+.plan-option label {
+    cursor: pointer;
+    border: 2px solid rgba(229, 231, 235, 1);
+    border-radius: 0.375rem;
+    background-color: rgba(249, 250, 251, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.plan-option label:hover {
+    background-color: rgba(240, 240, 240, 1);
+}
+
+.plan-option label .plan-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.plan-cost {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000;
+    font-weight: bold;
+
+}
+.plan-cost3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color:rgb(91, 194, 2);
+    font-weight: bold;
+
+}
+
+.plan-name {
+    font-size: 1rem;
+    color: rgb(77, 75, 99);
+    font-weight: bold;
+    font-style: italic;
+
+
+}
+.plan-name2 {
+    font-size: 2rem;
+    color: rgb(91, 194, 2);
+    font-weight: bold;
+
+}
+
+.reduction {
+    display: inline-block;
+    border-radius: 9999px;
+    border: 1px solid rgba(22, 163, 74, 1);
+    background-color: rgba(220, 252, 231, 1);
+    padding: 1.2rem 0.4rem;
+    font-size: 0.900rem;
+    font-weight: 600;
+    color: rgba(22, 163, 74, 1);
+    text-align: center;
+}
+
+.plan-option input:checked + label {
+  border: 4px solid rgba(22, 163, 74, 1);
+
+}
+
+.choose-btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    background-color: rgba(37, 99, 235, 1);
+    padding: 1rem 3rem;
+    font-weight: 600;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+.choose-btn:hover {
+    opacity: 0.9;
+}
+
+.plan-option input {
+    display: none;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+</style>    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #222;">
+        <div class="container-fluid">
+          <div class="header">
+            <img src="MyPics/logo2.gif" class="left-image" alt="Left Image" />
+            <div class="name">
+              <button>SHIVAM GYM</button>
+            </div>
+          </div>      
+          <button class="navbar-toggler" type="button" style="background-color: #ffffff; color: #f44336; border-color: #ffffff;" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i> Home</a>
+              </li>        
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="homeworkout.html"><i class="fas fa-dumbbell"></i> WorkOut at Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="slideskype.html"><i class="fas fa-dumbbell"></i> Advance Plan</a>
+              </li>          
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="plans.html"><i class="fas fa-chart-line"></i> ALL Plans Prices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="photo.html"><i class="fas fa-camera"></i> Photo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="profile.html"><i class="fas fa-user"></i> Profile</a>
+              </li>
+              <div class="tooltip-container" id="autoTooltip" onclick="redirectToJoinPage()">
+                <span class="tooltip">45k</span>
+                <span class="text">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 95 114"
+                    class="svgIcon"
+                  >
+                    <rect fill="black" rx="28.5" height="57" width="57" x="19"></rect>
+                    <path
+                      fill="black"
+                      d="M0 109.5C0 83.2665 21.2665 62 47.5 62V62C73.7335 62 95 83.2665 95 109.5V114H0V109.5Z"
+                    ></path>
+                  </svg>
+                  Start Free Trial!
+                </span>
+              </div>
+            </ul>
+            <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border-color: #ffffff;">
+              <button class="btn btn-outline-success" style="background-color: #f44336; color: #ffffff;" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+
+
+    
+
+    
+ <form class="plan-chooser" id="planForm">
+  <div class="header">
+      <!-- <span class="title">Choose your plan</span> -->
+      <div class="button">
+        <div class="box">S</div>
+        <div class="box">T</div>
+        <div class="box">A</div>
+        <div class="box">R</div>
+        <div class="box">T</div>
+    </div>
+  </div>
+  <div class="plan-option">
+      <input value="free" id="free" name="plan" type="radio">
+      <label for="free">
+          <div class="plan-info">
+              <span class="plan-cost3">Try Free</span>
+              <span class="plan-name">Workout At Home🏃</span>
+          </div>
+      </label>
+  </div>
+  <div class="plan-option">
+      <input value="monthly" id="monthly" name="plan" type="radio">
+      <label for="monthly">
+          <div class="plan-info">
+              <span class="plan-cost">Intermediate(Basic)</span>
+              <span class="plan-name">Basic Gym Exercises🏋️</span>
+              <span class="plan-name2">Rs. 39</span>
+          </div>
+      </label>
+  </div>
+  <div class="plan-option">
+      <input value="annual" id="annual" name="plan" type="radio">
+      <label for="annual">
+          <div class="plan-info">
+              <span class="plan-cost">Advance</span>
+              <span class="plan-name">Advance Gym Exercises</span>
+              <span class="plan-diet">FUll Diet Plan💪🏼</span>
+              <span class="plan-name2">Rs. 99</span>
+          </div>
+          <span class="reduction"> Save 20% </span>
+      </label>
+  </div>
+  <button type="button" class="choose-btn" onclick="selectPlan()">Start</button>
+</form>
+
+
+
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   -->
+
+    <div class="subscribe">
+      <p>MESSAGE</p>
+      <textarea placeholder="Message...!" class="subscribe-input" name="message" id="subscribeMessage"></textarea>
+      <br>
+      <div class="submit-btn" id="subscribeSubmit">SUBMIT</div>
+     </div>
+     <div id="toaster-container"></div>
+<!-- =========================================================================================== -->
+
+
+<!-- ================================================================================================ -->
+
+
+<ul class="wrapper">
+  <li class="icon facebook">
+    <span class="tooltip" data-tooltip="Go to Facebook">
+      <a href="https://www.facebook.com/share/1XmskygbwsJxRzo1/?mibextid=qi2Omg" target="_blank" style="color: white; text-decoration: none;">Facebook</a>
+    </span>  
+    <svg
+      viewBox="0 0 320 512"
+      height="1.2em"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+    <a href="https://www.facebook.com/share/1XmskygbwsJxRzo1/?mibextid=qi2Omg" target="_blank">
+
+      <path
+        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+      ></path>
+    </svg>
+  </li>
+  <li class="icon twitter">
+    <span class="tooltip" data-tooltip="Go to Twitter">
+      <a href="https://www.twitter.com" target="_blank" style="color: white; text-decoration: none;">Twitter</a>
+    </span>    
+    <svg
+      height="1.8em"
+      fill="currentColor"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+      class="twitter"
+    >
+    <a href="https://www.twitter.com" target="_blank">
+
+      <path
+        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+      ></path>
+    </svg>
+  </li>
+  <li class="icon instagram">
+    <span class="tooltip" data-tooltip="Go to Instagram">
+      <a href="https://www.instagram.com/shivam__walia__?utm_source=qr&igsh=MWwweXBqMmVtbXc0YQ==" target="_blank" style="color: white; text-decoration: none;">Instagram</a>
+    </span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="1.2em"
+      fill="currentColor"
+      class="bi bi-instagram"
+      viewBox="0 0 16 16"
+    >
+    <a href="https://www.instagram.com/shivam__walia__?utm_source=qr&igsh=MWwweXBqMmVtbXc0YQ==" target="_blank">
+
+      <path
+        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+      ></path>
+    </svg>
+  </li>
+</ul>
+      
+<!-- =================================================================================================   -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4>Contact Information</h4>
+        <ul>
+          <li><strong>Name:</strong> Shivam Wallu</li>
+          <li><strong>Email:</strong> er.shivamwallu@gmail.com</li>
+          <li><strong>Contact:</strong> 7814749816</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h4>About Me</h4>
+        <p>I am a B.Tech graduate specializing in Python Full Stack development.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- =========================================================================================== -->
+    <article id="wrap">
+      <article id="lightings">
+          <section id="one">
+                <section id="two">
+                    <section id="three">
+                        <section id="four">
+                            <section id="five">
+                                
+                            </section>
+                        </section>
+                    </section>
+                </section>
+        </section>
+        </article>
+    </article>
+  
+<!-- =================================================================================================   -->
+
+
+
+<script>
+   function selectPlan() {
+        var selectedPlan = document.querySelector('input[name="plan"]:checked').value;
+        if (selectedPlan === "free") {
+            window.location.href = "homeworkout.html";
+        } else if (selectedPlan === "monthly") {
+            window.location.href = "index.html";
+        } else if (selectedPlan === "annual") {
+            window.location.href = "slideskype.html";
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // ==================================================================================================================
+
+window.onload = function () {
+    var button = document.querySelector(".name button");
+    setInterval(function () {
+      button.classList.add("effect");
+      setTimeout(function () {
+        button.classList.remove("effect");
+      }, 500); // remove the class after 500ms
+    }, 2500); // add the class every 5000ms
+  };
+
+
+
+
+      
+
+// -----------------------------------------------------------------------------------
+
+
+//  Function to toggle auto-hover class every 3 seconds
+function toggleAutoHover() {
+  var tooltipContainer = document.getElementById('autoTooltip');
+  tooltipContainer.classList.toggle('auto-hover');
+}
+
+// Call toggleAutoHover function every 3 seconds
+setInterval(toggleAutoHover, 1500);
+
+function redirectToJoinPage() {
+  window.location.href = "register.html";
+}
+
+
+
+
+
+// =======================================================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('.header .button');
+
+    setInterval(() => {
+      button.classList.add('hover-active');
+      setTimeout(() => {
+        button.classList.remove('hover-active');
+      }, 1000); // Duration of the hover effect
+    }, 3000); // Interval between hover effects
+  });
+
+
+
+
+// ====================================================================================
+
+    // ICONS -- FACEBOOK. INSTAGRAM
+
+document.addEventListener("DOMContentLoaded", function() {
+const icons = document.querySelectorAll(".wrapper .icon");
+let currentIndex = 0;
+
+function hoverIcon(index) {
+  icons[index].classList.add("hovered");
+  setTimeout(() => {
+    icons[index].classList.remove("hovered");
+    currentIndex = (currentIndex + 1) % icons.length;
+    hoverIcon(currentIndex);
+  }, 3000); // Changed from 5000 to 3000 for 3-second delay
+}
+
+hoverIcon(currentIndex);
+});
+
+
+
+// ===============================================================================================
+
+
+
+ // MESSAGE
+
+ document.addEventListener('DOMContentLoaded', function() {
+  const subscribeButton = document.getElementById('subscribeSubmit');
+  subscribeButton.addEventListener('click', async function() {
+      const message = document.getElementById('subscribeMessage').value;
+
+      // Ensure the message is not empty
+      if (!message.trim()) {
+          showCustomWarning('Please enter a message.');
+          return;
+      }
+
+      const payload = {
+          message: message
+      };
+
+      const webhookUrl = 'https://hook.us1.make.com/8266mjlfbho9egseddx1l1hfya3cc45n';
+
+      try {
+          const response = await axios.post(webhookUrl, payload);
+          console.log('Message submitted successfully', response);
+          
+          // Show success toaster
+          showCustomSuccess('Message submitted successfully!');
+
+          // Clear the message input field
+          document.getElementById('subscribeMessage').value = '';
+      } catch (error) {
+          console.error('Error submitting message', error);
+      }
+  });
+});
+
+function showCustomSuccess(message) {
+  showCustomToaster(message, 'success', 'fa-check-circle');
+}
+
+function showCustomWarning(message) {
+  showCustomToaster(message, 'warning', 'fa-exclamation-circle');
+}
+
+function showCustomToaster(message, type, icon) {
+  const toasterContainer = document.getElementById('toaster-container');
+  
+  // Create toaster element
+  const toaster = document.createElement('div');
+  toaster.classList.add('toaster', type);
+  toaster.innerHTML = `<i class="fas ${icon}"></i> ${message}`;
+  
+  // Append toaster to container
+  toasterContainer.appendChild(toaster);
+
+  // Show the toaster
+  setTimeout(() => {
+      toaster.classList.add('show');
+  }, 10); // Timeout to trigger CSS transition
+
+  // Hide the toaster after 5 minutes
+  setTimeout(() => {
+      toaster.classList.remove('show');
+      // Remove the toaster from DOM after transition
+      toaster.addEventListener('transitionend', () => {
+          toasterContainer.removeChild(toaster);
+      });
+  },3000); // 5 minutes in milliseconds
+}
+
+
+
+
+   
+</script>    
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</script>    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
