@@ -1,7 +1,4 @@
-// https://chatgpt.com/c/f7e6f14a-8105-43f7-958b-4feb010ef4a1
   
-
-
 // Initialize Swiper with pagination
 let swiper = new Swiper(".mySwiper", {
   watchSlidesProgress: true,
@@ -20,15 +17,8 @@ var swipernew = new Swiper(".mySwiper2", {
   },
 });
 
-
-
   // ===============================================================================================
 
-
- // Remove this line:
-// document.getElementById("openBtn").addEventListener("click", function() {
-//   document.getElementById("popupForm").style.display = "block";
-// });
 
 document.getElementById("closeBtn").addEventListener("click", function() {
   closePopup();
@@ -134,69 +124,9 @@ function pauseAllVideos() {
 }
 
 
-
-
   // ========================================================================================================
 
  
-  // function playVideo(containerId, videoId) {
-  //   var container = document.getElementById(containerId);
-  //   var video = container.querySelector("video");
-  //   if (!video) return; // Return if video element is not found
-
-  //   // Pause all videos
-  //   pauseAllVideos();
-
-  //   // Set z-index to bring the container to the front
-  //   container.style.zIndex = 9999;
-
-  //   // Play the video
-  //   video.play();
-
-  //   // Play the corresponding video in the upper div of both sets
-  //   var upperVideo = document.getElementById(videoId);
-  //   if (upperVideo) {
-  //     upperVideo.play();
-  //   }
-
-  //   // Find the index of the swiper slide containing the played video
-  //   var swiperInstances = document.querySelectorAll(".swiper");
-  //   swiperInstances.forEach(function (swiperInstance) {
-  //     var slideIndex = Array.from(
-  //       swiperInstance.querySelectorAll(".swiper-slide")
-  //     ).findIndex(function (slide) {
-  //       return slide.contains(container);
-  //     });
-
-  //     // If the slide index is found, change the active slide
-  //     if (slideIndex !== -1) {
-  //       var swiper = swiperInstance.swiper;
-  //       swiper.slideTo(slideIndex);
-  //     }
-  //   });
-  // }
-
-  // function autoPlayUpperVideos() {
-  //   // Select all videos from both sets
-  //   var upperVideos = document.querySelectorAll(".swipernew video");
-  //   // Pause all videos first
-  //   pauseAllVideos();
-  //   // Play all upper videos
-  //   upperVideos.forEach(function (video) {
-  //     video.play();
-  //   });
-  // }
-
-  // function pauseAllVideos() {
-  //   // Pause all videos from both sets
-  //   var allVideos = document.querySelectorAll(".swiper video");
-  //   allVideos.forEach(function (video) {
-  //     if (!video.paused) {
-  //       video.pause();
-  //     }
-  //   });
-  // }
-
   // ------------------------------------------------------------------------------------------------
 
   function startHoverWithId(buttonId) {
@@ -302,99 +232,6 @@ window.onload = function () {
 
 
 // ==============================================================================
-
-
-// function handleSignup() {
-//   // Prevent form submission if it's inside a <form> element
-
-//   // Get user input
-//   const nameInput = document.getElementById("name");
-//   const emailInput = document.getElementById("email");
-//   const passwordInput = document.getElementById("password");
-
-//   const name = nameInput.value;
-//   const email = emailInput.value;
-//   const password = passwordInput.value;
-
-//   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-//   // Validate user input
-//   if (validateInput(name, email, password, emailPattern)) {
-//       const GymData = {
-//           name,
-//           email,
-//           password,
-//       };
-
-//       try {
-//           console.log("Storing GymData in cookies...");
-//           storeGymData(GymData);
-
-//           console.log("Sending data to Google Sheets...");
-//           sendDataToGoogleSheets(GymData);
-
-//           console.log("Closing the register popup...");
-//           document.getElementById("popupForm").style.display = "none";
-//       } catch (error) {
-//           console.error("An error occurred:", error);
-//           alert("An error occurred while storing your data. Please try again later.");
-//       }
-//   }
-// }
-
-// function validateInput(name, email, password, emailPattern) {
-//   if (name === "" || email === "" || password === "") {
-//       alert("Please fill in all the required fields.");
-//       return false;
-//   }
-
-//   if (!email.match(emailPattern)) {
-//       alert("Please enter a valid email address.");
-//       return false;
-//   }
-
-//   return true;
-// }
-
-// function storeGymData(GymData) {
-//   const expirationDate = new Date();
-//   expirationDate.setFullYear(expirationDate.getFullYear() + 10);
-//   const GymDataJson = JSON.stringify(GymData);
-//   const cookieString = `GymData=${encodeURIComponent(GymDataJson)}; expires=${expirationDate.toUTCString()}; path=/`;
-//   document.cookie = cookieString;
-//   console.log("GymData stored in cookies:", cookieString);
-// }
-
-// function deleteGymDataCookie() {
-//   document.cookie = "GymData=; expires=Thu, 01 Jan 2030 00:00:00 UTC; path=/;";
-//   alert("Account data deleted.");
-
-//   // Redirect to register.html
-//   window.location.href = "register.html";
-// }
-
-// function sendDataToGoogleSheets(GymData) {
-//   const webhookUrl = 'https://hook.us1.make.com/yjtnjnk5v9zytx7us03n4jeko9yqlt66';
-//   const payload = {
-//       name: GymData.name,
-//       email: GymData.email,
-//       password: GymData.password
-//   };
-
-//   axios.post(webhookUrl, payload)
-//       .then(response => {
-//           console.log('Data successfully sent to Google Sheets', response);
-//       })
-//       .catch(error => {
-//           console.error('Error sending data to Google Sheets', error);
-//       });
-// }
-
-// // Attach the event listener to the "Forgot Password" link
-// const forgotPasswordLink = document.getElementById("forgotPasswordLink");
-// forgotPasswordLink.addEventListener("click", deleteGymDataCookie);  
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
   // Attach the event listener to the "Forgot Password" link
@@ -522,42 +359,8 @@ function showCustomToaster(message, type, icon) {
     }, 3000);
   }
 
-// ------------------------------------------------------------------------------------------------'''
-
-
-// DIET PLAN
-
-
-
-
-
-// COLSE POPUP BUTTON
-
-
-// document.getElementById("openBtn").addEventListener("click", function() {
-//   document.getElementById("popupForm").style.display = "block";
-// });
-
-// document.getElementById("closeBtn").addEventListener("click", function() {
-//   document.getElementById("popupForm").style.display = "none";
-// });
-
-// window.onclick = function(event) {
-//   var modal = document.getElementById("popupForm");
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
-
 // ============================================================================================
-
-
-
-
 // DIET PLAN BUTTON STARS
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const button = document.querySelector('.unlockpro button');
   const stars = document.querySelectorAll('.unlockpro svg');
