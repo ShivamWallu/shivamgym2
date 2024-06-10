@@ -55,41 +55,6 @@ body {
   width: 100%;
 }
 
-/* .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-} */
-
-/* .swiper-slide video {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-} */
-/* .slide_1 {
-  background-color: #643ca3;
-}
-
-.slide_2 {
-  background-color: #e38364;
-}
-
-.slide_3 {
-  background-color: #faf47a;
-}
-
-.slide_4 {
-  background-color: #64e3c1;
-}
-
-.slide_5 {
-  background-color: #9e6ffd;
-}
-.slide_20 {
-  background-color: black;
-} */
 .swiper-pagination2 {
   z-index: 1000; /* Set a high z-index to ensure it's above the videos */
 }
@@ -99,18 +64,6 @@ body {
   margin-bottom: 60px;
 }
 
-/* .swiper-slide button {
-  position: absolute;
-  margin-top: 130px;
-  font-size: 1em;
-  padding: 0.5em 2.4em;
-  background-color: #bf0426;
-  text-decoration: none;
-  border: none;
-  border-radius: 0.5em;
-  color: #dedede;
-  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
-} */
 .swiper-slide button::before {
   position: absolute;
   content: "";
@@ -249,25 +202,6 @@ body {
   filter: drop-shadow(0 0 23px var(--animation-color));
 }
 /* ----------------------------------------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* MENU BUTTON */
 
@@ -486,11 +420,7 @@ box-shadow: -5px 6px 20px 0px rgba(219, 219, 219, 0.569);
 }
 
 /* ================================================================================ */
-
-
 /* footer */
-
-
 html, body
 {
 background: #222;
@@ -732,8 +662,6 @@ to { box-shadow: 0 0 100px 15px #F4F6AD; }
 
 /*INSTGRAM */
 
-
-
 .wrapper {
 display: inline-flex;
 list-style: none;
@@ -881,17 +809,6 @@ ul li strong {
 }
 
 /* ============================================================================================= */
-/* menu open */
-/* .nav-link.active {
-  font-weight: bold;
-} */
-
-/* .navbar-nav .nav-link {
-  color: #f44336 !important; 
-
-} */
-
-
 .navbar-nav .nav-link {
   color: #333333; /* Dark gray color */
   background-color: #f7f7f7; /* Light gray color */
@@ -923,29 +840,6 @@ ul li strong {
 .navbar-nav .nav-link {
   margin: 0 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ============================================================================ */
 /* JOIN IN BUTTON */
@@ -1013,12 +907,6 @@ ul li strong {
   pointer-events: auto;
 }
  
-
-/* =================================================================================== */
-
-
-
-
 /* =============================================================================================== */
 
 
@@ -1066,12 +954,8 @@ ul li strong {
   top: 376px;
   left: 179px;
   transform: translate(-50%, -50%);
- 
- 
 
 }
-
-
 .popup #welcome-lines {
   text-align: center;
   line-height: 1;
@@ -1214,49 +1098,9 @@ ul li strong {
   left: 205px;
   transform: translate(-50%, -50%);
 }
-
-
 }
 
 
-
-
-
-
-
-/* DIET PLAN */
-
-/* .diet {
-  width: 100%;
-  padding: 20px;
-}
-
-.full-width-button {
-  width: 100%;
-  padding: 15px;
-  font-size: 16px;
-  background-color: #8B9467;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.full-width-button:active {
-  background-color: #45a049;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-@media (max-width: 600px) {
-  .full-width-button {
-    font-size: 14px;
-    padding: 12px;
-  }
-} */
 
 .unlockpro button {
   position: relative;
@@ -1416,26 +1260,6 @@ ul li strong {
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* TOASTER SUCCESS MESSAGE */
 
 
@@ -1477,9 +1301,6 @@ ul li strong {
   background-color: red;
   color: rgb(255, 255, 255);
 }
-
-
-
 
 /* ================================================================================================================ */
 
@@ -1599,15 +1420,6 @@ ul li strong {
   cursor: pointer;
   border-radius: 6px;
 }
-
-
-
-
-
-
-
-
-
 
 .shine {
   display: flex;
